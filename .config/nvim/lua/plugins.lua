@@ -45,7 +45,7 @@ lazy.setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'ray-x/lsp_signature.nvim',
-    'L3MON4D3/LuaSnip',
+    {'L3MON4D3/LuaSnip', build = "make install_jsregexp"},
     'nvimtools/none-ls.nvim',
     'saadparwaiz1/cmp_luasnip',
     'VonHeikemen/lsp-zero.nvim',

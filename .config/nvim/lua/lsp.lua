@@ -19,6 +19,16 @@ require('mason-lspconfig').setup({
     },
 })
 
+require('lspconfig').pyright.setup({
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "basic"
+            }
+        }
+    }
+})
+
 local has_words_before = function()
     unpack = unpack or table.unpack
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))

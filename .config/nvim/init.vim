@@ -19,7 +19,7 @@ if !(exists('g:vscode'))
     nnoremap <silent> <leader>m :Lines<CR>
 
     " Formatting
-    nnoremap <silent> <leader>i :LspZeroFormat<CR>
+    nnoremap <silent> <leader>i :LspZeroFormat<CR>zR
 
     " System clipboard mappings
     noremap <leader>y "+y
@@ -62,20 +62,6 @@ if !(exists('g:vscode'))
     nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
     " By default timeoutlen is 1000 ms
     set timeoutlen=500
-
-    augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost * FormatWrite
-augroup END
-
-    " Exit Vim if NERDTree is the only window remaining in the only tab.
-    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-    " Close the tab if NERDTree is the only window remaining in it.
-    autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-    let g:NERDTreeGitStatusWithFlags = 1
-
-    let g:NERDTreeIgnore = ['^node_modules$']
 
     " j/k will move virtual lines (lines that wrap)
     noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')

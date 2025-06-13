@@ -24,27 +24,29 @@ ls.add_snippets(nil, {
                 "#define mat vector<vector<ll>>",
                 "#define all(v) v.begin(), v.end()",
                 "#define rall(v) v.rbegin(), v.rend()",
-                "#define alltrue(v) all_of(v.begin(), v.end(), []<typename T>(T i) { return i; })",
+                "#define endl '\\n'",
                 "#define M 1000000007",
-                "#define INF 1000000000000",
+                "#define INF 10000000000000000",
                 "#define vi vector<ll>",
                 "#define pi pair<ll, ll>",
                 "#define py(b) if (b) cout << \"YES\" << endl; else cout << \"NO\" << endl",
-                "int main() {"
-            }), insert(1, ""),
-            text({ "}" })
+                "",
+                "int main() {",
+                "  ios::sync_with_stdio(false);",
+                "  cin.tie(NULL);",
+                "",
+                "  "
+            }), insert(0, ""),
+            text({ "", "}" })
         }),
         snip({
             trig = "fileio",
             name = "Take input/output from files",
         }, {
-            text({ "#ifndef " }),
-            insert(1, "ONLINE_JUDGE"),
+            text({ "#ifndef ONLINE_JUDGE" }),
             text({ "", "freopen(\"" }),
             insert(2, "input.txt"),
-            text({ "\", \"r\", stdin);", "freopen(\"" }),
-            insert(3, "output.txt"),
-            text({ "\",  \"w\", stdout);", "#endif", "" }),
+            text({ "\", \"r\", stdin);", "//freopen(\"output.txt\",  \"w\", stdout);", "#endif", "" }),
         })
 
     },
