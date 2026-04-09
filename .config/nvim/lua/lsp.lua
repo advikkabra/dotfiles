@@ -19,6 +19,12 @@ require('mason-lspconfig').setup({
     },
 })
 
+require("lspconfig").ocamllsp.setup({
+  cmd = { "ocamllsp" },  -- picks up the one in $PATH (should be from opam now)
+  filetypes = { "ocaml", "reason", "ocamlinterface", "ocamldune" },
+  root_dir = require("lspconfig.util").root_pattern("*.opam", "dune-project", ".git"),
+})
+
 require('lspconfig').pyright.setup({
     settings = {
         python = {
@@ -110,3 +116,5 @@ require("nvim-autopairs").setup {}
 require("lsp_signature").setup { select_signature_key = '<C-j>' }
 require("luasnip").setup {}
 require("luasnip.loaders.from_vscode").lazy_load()
+
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open diagnostic float' })

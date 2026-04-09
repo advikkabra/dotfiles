@@ -29,8 +29,13 @@ lazy.setup({
     'justinmk/vim-sneak',
     'mbbill/undotree',
     'echasnovski/mini.surround',
+    'chomosuke/typst-preview.nvim',
     'folke/tokyonight.nvim',
-    'nvim-treesitter/nvim-treesitter',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
+        branch = 'main'
+    },
     'nvim-treesitter/nvim-treesitter-context',
     'navarasu/onedark.nvim',
     'morhetz/gruvbox',
@@ -52,5 +57,4 @@ lazy.setup({
     'mhartington/formatter.nvim',
     'hiphish/rainbow-delimiters.nvim',
     'windwp/nvim-autopairs',
-    'github/copilot.vim'
 })

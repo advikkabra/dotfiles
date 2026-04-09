@@ -88,7 +88,6 @@ if !(exists('g:vscode'))
 
     let g:onedark_config = { 
                 \ 'style': 'deep',
-                \ 'transparent': v:true,
     \ }
     let g:tokyonight_style = 'night'
     let g:tokyonight_transparent = 1
@@ -202,8 +201,8 @@ if !(exists('g:vscode'))
 
     augroup IndentWidth1
         au!
-        au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.c,*.cpp,*.h,*.hpp setl shiftwidth=2
-        au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.c,*.cpp,*.h,*.hpp setl tabstop=2
+        au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.c,*.cpp,*.h,*.hpp,*.ml setl shiftwidth=2
+        au BufNewFile,BufRead *.js,*.jsx,*.ts,*.tsx,*.html,*.css,*.c,*.cpp,*.h,*.hpp,*.ml setl tabstop=2
     augroup END
 
 endif
